@@ -1,4 +1,5 @@
 package com.luv2code.springdemo;
+import excercise.*;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +9,7 @@ public class AnnotationDemoApp {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		Coach theCoach = context.getBean("thatSillyCoach", Coach.class);
+		Coach theCoach = context.getBean("gymCoach", Coach.class);
 		
 		System.out.println(theCoach.getDailWorkout());
 		
