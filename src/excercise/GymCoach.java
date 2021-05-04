@@ -12,4 +12,10 @@ public class GymCoach implements Coach {
 		return "Do a 100 push-ups";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
