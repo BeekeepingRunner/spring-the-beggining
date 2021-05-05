@@ -6,11 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 
+	@Autowired
 	private FortuneService fortuneService;
 	
 	public TennisCoach() {
 		System.out.println(">> TennisCoach: default constructor");
 	}
+	
 	/*
 	@Autowired
 	public TennisCoach(FortuneService fortuneService) {
@@ -28,9 +30,11 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 	
+	/*
 	@Autowired
 	public void setFortuneService(FortuneService thrFortuneService) {
 		System.out.println(">> TennisCoach: setFortuneService()");
 		this.fortuneService = thrFortuneService;
 	}
+	*/
 }
