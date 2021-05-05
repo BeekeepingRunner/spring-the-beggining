@@ -8,10 +8,15 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
+	public TennisCoach() {
+		System.out.println(">> TennisCoach: default constructor");
+	}
+	/*
 	@Autowired
 	public TennisCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
+	*/
 
 	@Override
 	public String getDailWorkout() {
@@ -22,5 +27,10 @@ public class TennisCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
-
+	
+	@Autowired
+	public void setFortuneService(FortuneService thrFortuneService) {
+		System.out.println(">> TennisCoach: setFortuneService()");
+		this.fortuneService = thrFortuneService;
+	}
 }
