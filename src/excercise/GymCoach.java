@@ -21,6 +21,14 @@ public class GymCoach implements Coach {
 	@Qualifier("fileFortuneService")
 	private FortuneService fortuneService;
 	
+	public String getEmail() {
+		return email;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
 	@Override
 	public String getDailWorkout() {
 		return "Do a 100 push-ups";
