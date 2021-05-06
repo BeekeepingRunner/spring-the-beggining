@@ -2,14 +2,16 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import excercise.GymCoach;
+import com.luv2code.loggers.MyLoggerConfig;
+
+// import excercise.GymCoach;
 
 public class JavaConfigDemoApp {
 
 	public static void main(String[] args) {
 
 		AnnotationConfigApplicationContext context =
-				new AnnotationConfigApplicationContext(SportConfig.class);
+				new AnnotationConfigApplicationContext(SportConfig.class, MyLoggerConfig.class);
 		
 		Coach theCoach = context.getBean("tennisCoach", Coach.class);
 		
