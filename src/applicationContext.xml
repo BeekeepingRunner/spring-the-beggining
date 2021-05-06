@@ -13,7 +13,6 @@
     </bean>
 
 	<context:component-scan base-package="
-	com.luv2code.springdemo
 	excercise"
 	 />
 
