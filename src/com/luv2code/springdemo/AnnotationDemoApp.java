@@ -17,9 +17,9 @@ public class AnnotationDemoApp {
 		System.out.println(theCoach.getDailyFortune());
 		
 		// Excercise
-		// GymCoach myCoach = (GymCoach) theCoach;
-		// System.out.println(myCoach.getEmail());
-		// System.out.println(myCoach.getTeam());
+		GymCoach myCoach = (GymCoach) theCoach;
+		System.out.println(myCoach.getEmail());
+		System.out.println(myCoach.getTeam());
 		
 		context.close();
 	}

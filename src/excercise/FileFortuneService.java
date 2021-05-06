@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.stereotype.Component;
 
 import com.luv2code.springdemo.FortuneService;
@@ -16,7 +18,8 @@ public class FileFortuneService implements FortuneService {
 	ArrayList<String> fortunes = new ArrayList<>();
 	Random myRandom = new Random();
 	
-	public FileFortuneService() throws IOException {
+	@PostConstruct
+	public void readFortunes() throws IOException {
 		
 		BufferedReader buffReader = new BufferedReader(new FileReader("fortunes.txt"));
 		
@@ -26,6 +29,8 @@ public class FileFortuneService implements FortuneService {
 		}
 		
 		buffReader.close();
+		
+		System.out.println("FileFortuneService: readFortunes(): finished reading!");
 	}
 	
 	@Override
