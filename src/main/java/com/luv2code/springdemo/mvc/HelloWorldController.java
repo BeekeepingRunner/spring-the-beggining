@@ -19,12 +19,13 @@ public class HelloWorldController {
 		return "helloworld";
 	}
 	
-	@RequestMapping("/processFromVersionTwo")
+	@RequestMapping("/processFormVersionTwo")
 	public String letsShoutDude(HttpServletRequest request, Model model) {
 		
-		String result = (String) request.getAttribute("studentName");
-		result = result.toUpperCase();
-		result += "Yo!" + result;
+		String result = "Yo! ";
+		String theName = request.getParameter("studentName");
+		theName = theName.toUpperCase();
+		result += theName;
 		
 		model.addAttribute("message", result); 
 		
