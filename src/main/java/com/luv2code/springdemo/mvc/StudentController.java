@@ -29,7 +29,7 @@ public class StudentController {
 	public String processForm(@ModelAttribute("student") Student student) {
 		
 		System.out.println("theStudent: " + student.getFirstName()
-								+ " " + student.getLastName() + " " + student.getCountry());
+								+ " " + student.getLastName());
 		return "student-confirmation";
 	}
 }
