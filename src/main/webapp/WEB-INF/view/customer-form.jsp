@@ -6,6 +6,12 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Customer registration form</title>
+		
+		<style>
+			.error {
+				color:red
+			}
+		</style>
 	</head>
 	
 	<body>
