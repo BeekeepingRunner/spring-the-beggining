@@ -18,7 +18,7 @@
 	
 		<i>Fill out the form. Asterisk (*) means required.</i>
 		
-		<form:form action="processForm" modelAttribute="student">
+		<form:form action="processForm" modelAttribute="customer">
 		
 			First name: <form:input path="firstName" />
 			<br><br>
